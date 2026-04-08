@@ -5,7 +5,7 @@ import pandas as pd
 import streamlit as st
 
 st.set_page_config(
-    page_title = "Investic"
+    page_title = "Investic",
     page_icon = "Icon.jpg"
 )
 
