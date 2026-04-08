@@ -61,10 +61,11 @@ def grade_stock(ticker_symbol):
         return {"error": str(e)}
 
 # --- WHAT SHOWS TO SCREEN ---
+st.image("Icon.jpg", width = 50)
 symbol = st.text_input("Enter an NYSE Ticker (e.g., AAPL): ")
 result = grade_stock(symbol)
 st.balloons()
-st.image("Icon.jpg")
+
 
 if "error" in result:
     st.write(f"Error: {result['error']}")
