@@ -54,14 +54,14 @@ def grade_stock(ticker_symbol):
     except Exception as e:
         return {"error": str(e)}
 
-# --- EXAMPLE USAGE ---
-symbol = input("Enter an NYSE Ticker (e.g., AAPL): ")
+# --- WHAT SHOWS TO SCREEN ---
+symbol = st.text_input("Enter an NYSE Ticker (e.g., AAPL): ")
 result = grade_stock(symbol)
 
 if "error" in result:
-    print(f"Error: {result['error']}")
+    st.write(f"Error: {result['error']}")
 else:
-    print(f"\n--- {result['ticker']} REPORT ---")
-    print(f"Score: {result['final_score']}/100")
-    print(f"Grade: {result['grade']}")
-    print(f"2-Week Movement: {result['price_change']}")
+    st.write(f"\n--- {result['ticker']} REPORT ---")
+    st.write(f"Score: {result['final_score']}/100")
+    st.write(f"Grade: {result['grade']}")
+    st.write(f"2-Week Movement: {result['price_change']}")
