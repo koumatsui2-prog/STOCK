@@ -4,6 +4,11 @@ import yfinance as yf
 import pandas as pd
 import streamlit as st
 
+st.set_page_config(
+    page_title = "Investic"
+    page_icon = "Icon.jpg"
+)
+
 def grade_stock(ticker_symbol):
     try:
         # 1. Fetch 1 month of data to ensure we have a solid 2-week buffer
