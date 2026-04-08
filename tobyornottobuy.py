@@ -2,7 +2,7 @@
 
 import yfinance as yf
 import pandas as pd
-import steamlit as st
+import streamlit as st
 
 def grade_stock(ticker_symbol):
     try:
